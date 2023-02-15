@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EmployeeServiceInitializer extends SpringBootServletInitializer {
-
     @Override
     protected SpringApplicationBuilder configure(final SpringApplicationBuilder application){
         Map<String, Object> map = new HashMap<>();

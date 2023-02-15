@@ -1,30 +1,27 @@
 package com.companyname.department.employeeservice.domain.DAOS;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@EntityScan
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Data
+@Entity
 public class EmployeeDAO {
 
-    public enum EmployeeType {
-        FullTime, PartTime, Seasonal, Temporary
-    }
 
     @NotBlank
     private String employeeFirstName;
     private String employeeMiddleName;
     @NotBlank
     private String employeeLastName;
-    @NotBlank
+    @NotBlank @Id
     private String employeeID;
+    @NotBlank
+    private String employeeEmailID;
     private String department;
     @NotBlank
     private String location;
