@@ -1,11 +1,10 @@
 package com.companyname.department.employeeservice.domain.DAOS;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 
 @Data

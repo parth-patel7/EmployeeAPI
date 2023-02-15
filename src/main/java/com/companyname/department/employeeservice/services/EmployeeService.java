@@ -25,16 +25,16 @@ public class EmployeeService{
     }
 
     public EmployeeDAO deleteEmployee(String employeeID){
-        EmployeeDAO employee = employeeRepository.findBy(employeeID);
-        employeeRepository.delete(employee);
-        return employee;
+//        EmployeeDAO employee = employeeRepository.findBy(employeeID);
+//        employeeRepository.delete(employee);
+        return null;
     }
 
     public EmployeeDAO getEmployee(String employeeID) throws Exception {
-        EmployeeDAO employeeDAO = employeeRepository.findBy(employeeID);
-        if(employeeDAO == null){
-            throw new Exception("");
-        }
+//        EmployeeDAO employeeDAO = employeeRepository.findBy(employeeID);
+//        if(employeeDAO == null){
+//            throw new Exception("");
+//        }
         return null;
     }
 }

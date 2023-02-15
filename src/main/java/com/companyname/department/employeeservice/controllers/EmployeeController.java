@@ -2,7 +2,7 @@ package com.companyname.department.employeeservice.controllers;
 import com.companyname.department.employeeservice.domain.DAOS.EmployeeDAO;
 import com.companyname.department.employeeservice.domain.models.ResponseWrapper;
 import com.companyname.department.employeeservice.services.EmployeeService;
-import org.apache.http.HttpStatus;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,13 +17,13 @@ public class EmployeeController {
     @PutMapping("/add/employee")
     public ResponseWrapper<String> addEmployee(EmployeeDAO employee) throws Exception {
 
-        return new ResponseWrapper<String>(HttpStatus.SC_ACCEPTED, null, "metaData", employeeService.addEmployee(employee));
+        return new ResponseWrapper<String>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.addEmployee(employee));
     }
 
     @DeleteMapping("/remove/employee")
     public ResponseWrapper<EmployeeDAO> removeEmployee(String employeeID){
 
-        return new ResponseWrapper<EmployeeDAO>(HttpStatus.SC_OK, null, "metaData", employeeService.deleteEmployee(employeeID));
+        return new ResponseWrapper<EmployeeDAO>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.deleteEmployee(employeeID));
     }
 
     @PostMapping("/edit/employee")
@@ -34,6 +34,6 @@ public class EmployeeController {
 
     @GetMapping("/get/employee")
     public ResponseWrapper<EmployeeDAO> getEmployee(String employeeID) throws Exception {
-        return new ResponseWrapper<EmployeeDAO>(HttpStatus.SC_OK, null, "metaData", employeeService.getEmployee(employeeID));
+        return new ResponseWrapper<EmployeeDAO>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.getEmployee(employeeID));
     }
 }
