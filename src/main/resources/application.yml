@@ -1,9 +1,0 @@
-server:
-  port: 8080
-spring:
-  hikari:
-  datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost:8090
-    password: ""
-    username: ""
