@@ -17,13 +17,13 @@ public class EmployeeController {
     @PutMapping("/add/employee")
     public ResponseWrapper<String> addEmployee(EmployeeDAO employee) throws Exception {
 
-        return new ResponseWrapper<String>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.addEmployee(employee));
+        return new ResponseWrapper<>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.addEmployee(employee));
     }
 
     @DeleteMapping("/remove/employee")
-    public ResponseWrapper<EmployeeDAO> removeEmployee(String employeeID){
+    public ResponseWrapper<String> removeEmployee(String employeeID){
 
-        return new ResponseWrapper<EmployeeDAO>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.deleteEmployee(employeeID));
+        return new ResponseWrapper<>(HttpStatus.ACCEPTED.value(), null, "metaData", "T");
     }
 
     @PostMapping("/edit/employee")
@@ -34,6 +34,6 @@ public class EmployeeController {
 
     @GetMapping("/get/employee")
     public ResponseWrapper<EmployeeDAO> getEmployee(String employeeID) throws Exception {
-        return new ResponseWrapper<EmployeeDAO>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.getEmployee(employeeID));
+        return new ResponseWrapper<>(HttpStatus.ACCEPTED.value(), null, "metaData", employeeService.getEmployee(employeeID));
     }
 }
