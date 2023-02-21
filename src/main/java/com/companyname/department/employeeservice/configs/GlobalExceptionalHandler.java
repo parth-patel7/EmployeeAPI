@@ -4,12 +4,15 @@ import com.companyname.department.employeeservice.domain.models.Message;
 import com.companyname.department.employeeservice.domain.models.ResponseWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.Collections;
 
+@ControllerAdvice
 @Slf4j
 public class GlobalExceptionalHandler {
 

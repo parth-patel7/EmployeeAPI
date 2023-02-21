@@ -29,7 +29,7 @@ public class EmployeeController {
     @PostMapping("/edit/employee")
     public ResponseWrapper<EmployeeDAO> editEmployee(EmployeeDAO employeeDAO){
 
-        return new ResponseWrapper();
+        return new ResponseWrapper<>();
     }
 
     @GetMapping("/get/employee")

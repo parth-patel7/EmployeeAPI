@@ -4,9 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-
-
-
 @Data
 @Entity
 public class EmployeeDAO {
