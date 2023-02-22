@@ -2,12 +2,12 @@ package com.companyname.department.employeeservice.domain.DAOS;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 @Data
 @Entity
 public class EmployeeDAO {
-
 
     @NotBlank
     private String employeeFirstName;
